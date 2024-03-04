@@ -1,0 +1,29 @@
+//https://fonts.google.com/specimen/Open+Sans?query=open+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+//https://www.1001fonts.com/muli-font.html
+@font-face {
+    font-family: 'Muli Regular';
+    src: url('./assets/muli.regular.ttf');
+};
+
+:root{
+    //colors
+    --lightgreen: #D8EADB;
+    --lime: #6DA830;
+    --green: #3F7749;
+    --darkgreen: #114D46;
+    --red: #773F3F;
+    --lightrose: #EAD8D8;
+    --blue: #017EC0;
+    --darkblue: #232F44;
+    --lightgrey: #00000029;
+    --grey: #92929D;
+    --darkgrey: #696974;
+    --black: #000;
+    --white: #FFF;
+
+    //fonts 
+    --headline: 'Muli Regular', sans-serif;
+    --text: 'Open Sans', sans-serif;;
+}
+

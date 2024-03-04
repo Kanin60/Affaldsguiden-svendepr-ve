@@ -1,0 +1,22 @@
+
+    @import url('../../globalStyling.scss');
+    form{
+        h2{
+        }
+        label{
+            input{
+                color: aqua;
+            }
+        }
+        input[type='submit'] {
+            color: aqua;
+        }
+    }
+    .LoginPageWrapper{
+        p{
+        }
+        .toggleButton{
+            color: aqua;
+        }
+    }
+

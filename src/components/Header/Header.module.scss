@@ -1,0 +1,13 @@
+
+    @import url('../../globalStyling.scss');
+    .header{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .header{
+            margin: 0;
+        }
+    }
+

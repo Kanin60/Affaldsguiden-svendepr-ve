@@ -1,0 +1,11 @@
+.button{
+    padding: 15px;
+    border-radius: 3px;
+    a{
+        text-decoration: none;
+        font-family: var(--text);
+    }
+}
+.button:hover{
+    filter: brightness(110%);
+}

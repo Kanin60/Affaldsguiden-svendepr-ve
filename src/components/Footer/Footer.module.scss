@@ -1,0 +1,55 @@
+
+    @import url('../../globalStyling.scss');
+    .footer{
+        padding: 20px;
+        background-color: var(--darkgreen);
+        ul{
+            max-width: 1200px;
+            margin: auto;
+            li{
+                list-style: none;
+                h4, p, a{
+                    color: var(--white);
+                    font-family: var(--text);
+                }
+            }
+            li:nth-child(1){
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 27px;
+                    height: 41px;
+                }
+                h4{
+                    margin-left: 10px;
+                }
+            }
+            li:nth-child(2){
+                max-width: 400px;
+                margin-bottom: 30px;
+                p{
+                    font-weight: 300;
+                }
+            }
+            li:nth-child(3){
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+                
+    }
+
+    @media only screen and (max-width: 768px) {
+        .footer{
+            ul{
+                li:nth-child(3){
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+
+
