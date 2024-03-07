@@ -3,7 +3,7 @@ import style from './Accordion.module.scss'
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
-export const Accordion = ({ title, imgSrc, color, children }) => {
+export const Accordion = ({ id, title, imgSrc, color, children }) => {
     //https://github.com/Eon4/CodeChallenge/blob/main/code/src/Components/Accordion/Accordion.jsx
     const [isOpen, setIsOpen] = useState(false);
 

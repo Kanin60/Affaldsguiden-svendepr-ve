@@ -7,8 +7,8 @@ import { SearchCard } from '../../components/SearchCard/SearchCard'
 import { Link } from 'react-router-dom'
 export function TrashguidePage() {
     const [sectionList, setSectionList] = useState()
-    const [search, setSearch] = useState('')
-    const [searchResult, setSearchResult] = useState('')
+    const [search, setSearch] = useState()
+    const [searchResult, setSearchResult] = useState(null)
 
     let sectionListArray = useFetch('http://localhost:4000/section?sort_key=title')
 
@@ -27,7 +27,7 @@ export function TrashguidePage() {
             });
     }, [search])
 
-    // console.log('searchResult', searchResult);
+    console.log('searchResult', searchResult);
     return (
         <section className={style.trashguidepagebg}>
             <div className={style.trashguidepage}>
@@ -39,13 +39,15 @@ export function TrashguidePage() {
                         ?
                         sectionList?.map((section, index) => {
                             return (
-                                <Link key={index} to={`/sortering/${section.id}`}><SortingCard ImgSrc={`http://localhost:4000/Assets/Images/Guide/Categories/${section?.filename}`} title={section?.title} bgcolor={'#' + section?.color} /></Link>
+                                <Link key={index} to={`/sortering/${section.id}`}>
+                                    <SortingCard ImgSrc={`http://localhost:4000/Assets/Images/Guide/Categories/${section?.filename}`} title={section?.title} bgcolor={'#' + section?.color} />
+                                </Link>
                             )
                         })
                         :
-                        searchResult?.map((section) => {
+                        searchResult?.map((section, index) => {
                             return (
-                                <SearchCard key={section?.id} title={section?.title} type={section?.type} />
+                                <SearchCard key={index} title={section?.title} type={section?.type} />
                             )
                         })
                     }

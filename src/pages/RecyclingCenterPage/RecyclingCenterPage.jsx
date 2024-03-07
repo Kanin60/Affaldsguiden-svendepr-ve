@@ -5,7 +5,7 @@ import map from '../../assets/map.svg'
 import { Link } from 'react-router-dom'
 
 export function RecyclingCenterPage() {
-
+    const [averageStar, setAverageStar] = useState()
     const [recyclingCenterList, setRecyclingCenterList] = useState()
     let recyclingCenterArray = useFetch('http://localhost:4000/orgs?attributes=id,name,address,zipcode,city')
 
@@ -14,7 +14,7 @@ export function RecyclingCenterPage() {
     }, [recyclingCenterArray])
 
     console.log(recyclingCenterList);
-
+    console.log('Gennemsnit af stjerner: ', averageStar);
     return (
         <section className={style.bg}>
             <div className={style.recyclingcenterpage}>
@@ -29,6 +29,7 @@ export function RecyclingCenterPage() {
                                     <p>{center.zipcode} {center.city}</p>
                                 </figcaption>
                             </figure>
+
                         </Link>
                     )
                 })}

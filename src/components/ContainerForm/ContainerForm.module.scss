@@ -34,6 +34,8 @@
         padding: 40px;
         background-color: var(--formborder);
         border-radius: 0 10px 10px 0;
+        display: flex;
+        flex-direction: column;
         p:nth-child(1){
             font-family: var(--text);
             margin-bottom: 20px;
@@ -83,16 +85,19 @@
             }
         }
         .containerformbutton{
-            display: flex;
-            justify-content: end;
-            input[type='submit']{
-                width: 100px;
-                padding: 10px;
-                border: none;
-                border-radius: 4px;
-                background-color: var(--lightgreen);
-                box-shadow: 0px 5px 5px 3px rgba(170, 168, 168, 0.77);
-            }
+            align-self: end;
+            text-align: center;
+            text-decoration: none;
+            font-family: var(--text);
+            background-color: var(--lightgreen);
+            box-shadow: 0px 5px 5px 3px rgba(170, 168, 168, 0.77);
+            width: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        .containerformbutton:hover{
+            filter: contrast(110%);
         }
     }
 }

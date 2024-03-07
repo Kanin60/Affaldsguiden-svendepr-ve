@@ -21,12 +21,11 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
     let recyclingCenterDetailsArray = useFetch(`http://localhost:4000/orgs/${id}`)
     let recyclingCenterDetailsList = recyclingCenterDetailsArray?.data
     let reviewArray = useFetch(`http://localhost:4000/reviews/${id}`)
-    let reviewList = reviewArray?.data
 
     useEffect(() => {
         setRecyclingCenterDetails(recyclingCenterDetailsList)
-        setReview(reviewList)
-    }, [recyclingCenterDetailsList, reviewList, handleReview])
+        setReview(reviewArray?.data)
+    }, [recyclingCenterDetailsList, reviewArray, handleReview])
 
     function handleReview(e) {
         e.preventDefault()
@@ -34,7 +33,7 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
         let url = 'http://localhost:4000/reviews'
 
         let body = new URLSearchParams()
-        body.append('org_id', 1)
+        body.append('org_id', id)
         body.append('subject', e.target.subject.value)
         body.append('comment', e.target.comment.value)
         body.append('num_stars', star)
@@ -49,10 +48,8 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
         fetch(url, options)
             .then((res) => res.json())
             .then((data) => {
-                console.log('data:', data);
-                if (data?.access_token) {
-                    console.log(data);
-                    setMessage(`kommentar modtaget `);
+                if (data.message === 'Record created') {
+                    setMessage(`Kommentar modtaget`);
                 } else {
                     setMessage("Der opstod en fejl - prøv igen");
                 }
