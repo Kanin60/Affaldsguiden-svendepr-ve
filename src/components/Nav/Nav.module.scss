@@ -39,6 +39,10 @@
         width: 47px;
         height: 47px;
     }
+    svg:hover{
+        filter: saturate(2);
+        cursor: pointer;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -1,0 +1,38 @@
+.reviewcard{
+    box-shadow: 0px 5px 8px 3px rgba(233, 232, 232, 0.77);
+    margin: 20px;
+    padding: 10px;
+    .reviewcardwrapper{
+        display: grid;
+        grid-template-columns: 5% 1fr;
+        align-items: center;
+        gap: 40px;
+        svg{
+            margin: 10px;
+            font-size: 22px;
+            color: var(grey);
+        }
+        .reviewcontent{
+            .reviewcardtitle{
+                display: flex;
+                justify-content: space-between;
+                h3, p{
+                    font-size: 16px;
+                    font-family: var(--text);
+                    color: var(--blackgrey);
+                }
+            }
+            .review{
+                h4, p{
+                    font-size: 14px;
+                    font-family: var(--text);
+                    color: var(--blackgrey);
+                }
+                p:nth-child(3){
+                    color: var(--star);
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,14 @@
+
+import { ContainerForm } from '../../components/ContainerForm/ContainerForm'
+import style from './TrashContainerPage.module.scss'
 export function TrashContainerPage() {
 
+
     return (
-        <>
-            <h2>Her er TrashContainerPage.</h2>
-        </>
+        <section className={style.trashcontainerpage}>
+            <div>
+                <ContainerForm />
+            </div>
+        </section>
     )
 }

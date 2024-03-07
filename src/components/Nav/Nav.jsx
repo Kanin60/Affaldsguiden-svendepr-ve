@@ -2,7 +2,8 @@
 import style from './Nav.module.scss'
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import { IoIosUnlock } from "react-icons/io";
+import { Modal } from '../Modal/Modal';
+import { Signin } from "../Login/Signin";
 
 export const Nav = () => {
 
@@ -35,7 +36,16 @@ export const Nav = () => {
                     <NavLink to='/bestil-beholder' style={activeStyle}>Bestil beholder</NavLink>
                 </li>
             </ul>
-            <IoIosUnlock />
+            <Modal>
+                <div>
+                    <figure>
+                        <img src={logo} alt='logo' />
+                        <h1>Affaldsguiden</h1>
+                    </figure>
+                    <p>Log ind på Affaldsguiden <br /> for at anmelde stationer</p>
+                </div>
+                <Signin />
+            </Modal>
         </nav>
     )
 }

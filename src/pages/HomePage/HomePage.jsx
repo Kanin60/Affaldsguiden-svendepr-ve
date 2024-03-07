@@ -6,6 +6,7 @@ import trashcan from '../../assets/bestil-din-nye-affaldsbeholder.webp'
 
 export function HomePage() {
 
+
     return (
         <section>
             <Slider />

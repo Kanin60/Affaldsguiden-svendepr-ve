@@ -1,0 +1,24 @@
+.search{
+    form{
+        label{
+            width: 350px;
+            
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            background-color: var(--white);
+            box-shadow: 0px 5px 8px 3px rgba(171, 171, 171, 0.77);
+            input{
+                width: 100%;
+                padding: 7px;
+                border: none;
+                border-radius: 20px;
+            }
+        }
+        input::placeholder{
+            padding: 20px;
+        }
+    }
+}

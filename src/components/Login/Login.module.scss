@@ -1,22 +1,51 @@
 
     @import url('../../globalStyling.scss');
-    form{
+    .form{
+        background-color: var(--formbg);
+        padding: 50px;
+        width: 450px;
+        height: 350px;
+        border-radius: 10px;
+        font-family: var(--text);
         h2{
+            font-weight: 400;
+            font-size: 28px;
+            color: var(--blackgrey);
+            margin-bottom: 30px;
         }
-        label{
-            input{
-                color: aqua;
+        div{
+            display: grid;
+            grid-template-columns: 1fr;
+            label{
+                input{
+                    width: 100%;
+                    color: var(--blackgrey);
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid var(--formborder);
+                }
             }
-        }
-        input[type='submit'] {
-            color: aqua;
-        }
-    }
-    .LoginPageWrapper{
-        p{
-        }
-        .toggleButton{
-            color: aqua;
+            .buttoncontainer{
+                display: flex;
+                justify-content: center;
+                input[type='submit'] {
+                    color: var(--blackgrey);
+                    width: 100px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    color: var(--white);
+                    background-color: var(--darkgreen);
+                }
+            }
         }
     }
 
+    @media only screen and (max-width: 768px){
+        form{
+            width: 100%;
+            height: 100%;
+        }
+    }

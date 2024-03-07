@@ -1,0 +1,30 @@
+.trashdetailspage{
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0px 5px 8px 3px rgba(231, 230, 230, 0.77);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    // border: 1px solid red;
+    .trashdetailspagewrapper{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        border-radius: 10px 11px 0 0;
+        h2{
+            padding-left: 40px;
+            font-family: var(--text);
+            color: var(--white);
+            font-weight: 500;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            object-position:  center center;
+            border-radius: 0 10px 0 0;
+        }
+    }
+
+}
