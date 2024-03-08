@@ -16,7 +16,7 @@ export const Footer = () => {
                 <li><p>Vi arbejder for at informere om korrekt affaldssortering. Ved at sortere hjælper du os, men også klimaet.</p></li>
                 <li>
                     <p>©2023 Affaldsguiden. </p>
-                    <a href='#top'>Back to top <FaCircleArrowUp /></a>
+                    <a href='#top'>Tilbage til toppen <FaCircleArrowUp /></a>
                 </li>
             </ul>
         </footer>

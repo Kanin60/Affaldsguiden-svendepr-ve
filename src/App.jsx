@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HomePage } from './pages/HomePage/HomePage';
 import { TrashguidePage } from './pages/TrashguidePage/TrashguidePage';
 import { TrashDetailsPage } from './pages/TrashDetailsPage/TrashDetailsPage';
-import { LoginPage } from './pages/LoginPage/LoginPage';
 import { ErrorPage } from './pages/ErrorPage/ErrorPage'
 import { MainLayout } from './layout/MainLayout';
 import { RecyclingCenterPage } from './pages/RecyclingCenterPage/RecyclingCenterPage';
@@ -24,7 +23,6 @@ function App() {
                         <Route path='/genbrugsstationer' element={<RecyclingCenterPage />} />
                         <Route path='/genbrugsstationer/:id' element={<RecyclingDetailsPage />} />
                         <Route path='/bestil-beholder' element={<TrashContainerPage />} />
-                        <Route path='/login' element={<LoginPage />} />
                         <Route path='/*' element={<ErrorPage />} />
                     </Route>
                 </Routes>

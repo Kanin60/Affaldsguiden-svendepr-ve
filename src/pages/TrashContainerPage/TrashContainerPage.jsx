@@ -13,7 +13,7 @@ export function TrashContainerPage() {
 
     useEffect(() => {
         setContainer(containerData)
-    }, [])
+    }, [containerData.data > 0])
 
     console.log('container', container)
     console.log('type', container_id)

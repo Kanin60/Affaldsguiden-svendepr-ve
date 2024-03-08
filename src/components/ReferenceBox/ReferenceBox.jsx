@@ -9,7 +9,7 @@ export const ReferenceBox = () => {
                 <p>Find og anmeld genbrugsstationer</p>
                 <div>
                     <Button text='Find station' bg={'#114D46'} color={'#FFF'} border={'none'} path='/genbrugsstationer' />
-                    <Button text='Log ind' bg={'#114D46'} color={'#FFF'} border={'none'} path='/login' />
+                    <Button text='Log ind' bg={'#114D46'} color={'#FFF'} border={'none'} path='/' />
                 </div>
             </div>
         </section>

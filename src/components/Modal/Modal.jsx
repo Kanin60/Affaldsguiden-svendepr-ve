@@ -2,6 +2,8 @@ import style from './Modal.module.scss'
 import { useState } from 'react';
 import { IoIosUnlock } from "react-icons/io";
 
+//https://github.com/Kanin60/Mediesuset/blob/main/src/pages/Frontpage/Frontpage.jsx , https://github.com/Kanin60/Mediesuset/blob/main/src/components/Modal/Modal.jsx 
+
 export const Modal = (props) => {
     const [modalOpen, setModalOpen] = useState(false);
 
