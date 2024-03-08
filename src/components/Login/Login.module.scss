@@ -1,5 +1,9 @@
 
-    @import url('../../globalStyling.scss');
+    .user{
+        font-family: var(--text);
+        font-size: 30px;
+        color: var(--blackgrey);
+    }
     .form{
         background-color: var(--formbg);
         padding: 50px;

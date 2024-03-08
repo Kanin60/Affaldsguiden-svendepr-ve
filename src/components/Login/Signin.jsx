@@ -56,7 +56,7 @@ export const Signin = ({ closeModal }) => {
         <>
             {
                 userData &&
-                    userData ? `Velkommen `
+                    userData ? <p className={style.user}>Velkommen {userData?.user?.firstname} {userData?.user?.lastname}</p>
                     :
                     <form className={style.form} onSubmit={(e) => handleLogin(e)}>
                         <h2>Log ind</h2>

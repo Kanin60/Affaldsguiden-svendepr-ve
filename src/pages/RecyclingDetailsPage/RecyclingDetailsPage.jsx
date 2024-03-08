@@ -84,7 +84,7 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
                         <div>
                             <form onSubmit={(e) => handleReview(e)} className={style.reviewform}>
                                 <div className={style.reviewformtitle}>
-                                    <h3>Skriv en kommentar</h3>
+                                    {!userData ? <h3>Du skal være logget ind for at skrive en kommentar</h3> : <h3>Skriv en kommentar</h3>}
                                     {message && <p>{message}</p>}
                                     {star == null
                                         ?
