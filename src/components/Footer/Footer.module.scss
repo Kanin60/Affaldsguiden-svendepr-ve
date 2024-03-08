@@ -8,9 +8,10 @@
             margin: auto;
             li{
                 list-style: none;
-                h4, p, a{
+                h3, p, a{
                     color: var(--white);
                     font-family: var(--text);
+                    margin-left: 10px;
                 }
             }
             li:nth-child(1){

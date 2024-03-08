@@ -11,7 +11,7 @@ export const Footer = () => {
             <ul>
                 <li>
                     <img src={logo} alt="logo" />
-                    <h4>Affaldsguiden</h4>
+                    <h3>Affaldsguiden</h3>
                 </li>
                 <li><p>Vi arbejder for at informere om korrekt affaldssortering. Ved at sortere hjælper du os, men også klimaet.</p></li>
                 <li>

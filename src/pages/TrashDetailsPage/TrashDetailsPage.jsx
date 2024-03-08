@@ -43,7 +43,7 @@ export function TrashDetailsPage() {
                                                 return (
                                                     <div key={index}>
                                                         <p>{type?.title}</p>
-                                                        <p>Ja, tak</p>
+                                                        <p>Ja</p>
                                                     </div>
                                                 )
                                             })
@@ -57,7 +57,7 @@ export function TrashDetailsPage() {
                                                 return (
                                                     <div>
                                                         <p>{type?.title}</p>
-                                                        <p>Nej, tak</p>
+                                                        <p>Nej</p>
                                                     </div>
                                                 )
                                             })

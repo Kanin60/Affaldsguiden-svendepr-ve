@@ -10,7 +10,6 @@ import { MainLayout } from './layout/MainLayout';
 import { RecyclingCenterPage } from './pages/RecyclingCenterPage/RecyclingCenterPage';
 import { RecyclingDetailsPage } from './pages/RecyclingDetailsPage/RecyclingDetailsPage';
 import { TrashContainerPage } from './pages/TrashContainerPage/TrashContainerPage';
-import { TrashContainerPageStepTwo } from './pages/TrashContainerPageStepTwo/TrashContainerPageStepTwo';
 
 function App() {
 
@@ -25,7 +24,6 @@ function App() {
                         <Route path='/genbrugsstationer' element={<RecyclingCenterPage />} />
                         <Route path='/genbrugsstationer/:id' element={<RecyclingDetailsPage />} />
                         <Route path='/bestil-beholder' element={<TrashContainerPage />} />
-                        {/* <Route path='/bestil-beholder/adresse' element={<TrashContainerPageStepTwo />} /> */}
                         <Route path='/login' element={<LoginPage />} />
                         <Route path='/*' element={<ErrorPage />} />
                     </Route>
