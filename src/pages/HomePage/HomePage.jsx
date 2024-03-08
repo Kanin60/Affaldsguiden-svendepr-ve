@@ -6,7 +6,7 @@ import trashcan from '../../assets/bestil-din-nye-affaldsbeholder.webp'
 
 export function HomePage() {
 
-
+    //returner Slider, ReferenceBox og to fjollede Articler
     return (
         <section>
             <Slider />

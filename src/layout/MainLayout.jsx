@@ -5,6 +5,7 @@ import { Waves } from '../components/Waves/Waves';
 
 export const MainLayout = () => {
 
+    //opbygning af site
     return (
         <div>
             <Header />

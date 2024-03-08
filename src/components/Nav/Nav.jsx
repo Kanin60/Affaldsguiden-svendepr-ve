@@ -15,7 +15,7 @@ export const Nav = () => {
         }
     }
 
-    //retunere navigationsbar
+    //retunere navigationsbar og modal med login
     return (
         <nav className={style.nav} id='top'>
             <figure>

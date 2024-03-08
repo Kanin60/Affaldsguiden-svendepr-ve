@@ -4,7 +4,7 @@ import { dateconverter } from "../../helpers/dateconverter";
 import { starconverter } from '../../helpers/starconverter';
 
 export const ReviewCard = ({ username, date, title, stars, text }) => {
-
+    //card forkorter antal tegn
     let newDate = dateconverter(date)
     let star = starconverter(stars)
 

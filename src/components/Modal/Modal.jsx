@@ -7,17 +7,16 @@ import { IoIosUnlock } from "react-icons/io";
 export const Modal = (props) => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    // Function to open the modal
+    // funktioner som åbner og lukker modal
     const openModal = () => {
         setModalOpen(true);
     };
 
-    // Function to close the modal
+
     const closeModal = () => {
         setModalOpen(false);
     };
 
-    // Function to close the modal when clicking outside
     const handleOutsideClick = (e) => {
         if (modalOpen && e.target === e.currentTarget) {
             closeModal();

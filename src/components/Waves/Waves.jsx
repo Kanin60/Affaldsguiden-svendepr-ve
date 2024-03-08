@@ -14,7 +14,7 @@ export const Waves = () => {
     const wave = [wave1, wave2, wave3, wave4, wave5, wave6, wave7, wave8]
     const [waveId, setWaveId] = useState(0);
 
-    // randome waveId hvert 3 sekund 
+    // randome waveId hvert 3 sekund til baggrund
     useEffect(() => {
         const randomId = setInterval(() => {
             setWaveId(Math.floor(Math.random() * 7))

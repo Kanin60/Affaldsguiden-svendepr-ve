@@ -10,24 +10,26 @@ export function TrashguidePage() {
     const [search, setSearch] = useState()
     const [searchResult, setSearchResult] = useState(null)
 
+    //fetcher og genner data i state
     let sectionListArray = useFetch('http://localhost:4000/section?sort_key=title')
-
     useEffect(() => {
         setSectionList(sectionListArray.data)
     }, [sectionListArray])
 
-    //https://github.com/TCAA-Web/Search_in_React/blob/main/src/App.jsx
+    //Fetcher data fra search endpiont og gemmer i state. vil gerne have en filter funktion, som viser sektionen eller kategorien
+    //kode fra https://github.com/TCAA-Web/Search_in_React/blob/main/src/App.jsx
     useEffect(() => {
         let url = `http://localhost:4000/search/${search}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => {
-                let filteredData = data?.data/* ?.filter((data) => data.type === "section") */
+                let filteredData = data?.data
                 setSearchResult(filteredData)
             });
     }, [search])
+    // console.log('searchResult', searchResult);
 
-    console.log('searchResult', searchResult);
+    //retunere sektioncard eller søgeresultat
     return (
         <section className={style.trashguidepagebg}>
             <div className={style.trashguidepage}>

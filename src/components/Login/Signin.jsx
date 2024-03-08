@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import { UserContext } from "../../context/UserContext";
 import style from './Login.module.scss'
 
-//https://github.com/Kanin60/Det-utrolige-teater/blob/main/src/components/Login/Login.jsx
+// koden er fra https://github.com/Kanin60/Det-utrolige-teater/blob/main/src/components/Login/Login.jsx
 export const Signin = ({ closeModal }) => {
     //state fra context som bliver opdateret
     const { setUserData, userData } = useContext(UserContext);

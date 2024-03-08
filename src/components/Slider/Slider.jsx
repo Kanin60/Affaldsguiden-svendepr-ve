@@ -9,6 +9,9 @@ import spande from '../../assets/Slideshow/malerspande.jpg'
 
 export const Slider = () => {
 
+    //importere billederne og gemmer dem i et array. 
+    //To funktioner som incrementer (lægger 1 til) og decrementer (minuser med 1) 
+    //alt efter hviklet icon der bliver trykket på.
     const sliderArray = [
         skov,
         strand,

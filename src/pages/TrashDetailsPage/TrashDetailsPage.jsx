@@ -5,12 +5,13 @@ import style from './TrashDetailsPage.module.scss'
 import { useFetch } from "../../hooks/useFetch";
 
 export function TrashDetailsPage() {
-    //https://github.com/Kanin60/Det-utrolige-teater/blob/main/src/pages/DetailsPage/DetailsActorPage.jsx
+
+    //Inspireret af https://github.com/Kanin60/Det-utrolige-teater/blob/main/src/pages/DetailsPage/DetailsActorPage.jsx
     const { id } = useParams()
     const [sectionDetails, setSectionDetails] = useState()
     const [categoryDetails, setCategoryDetails] = useState()
 
-
+    //fetch fra section(bruger id som sendes med som parameter) og category
     useEffect(() => {
         const url = `http://localhost:4000/section/${id}`
         fetch(url).then(res => res.json()).then(data => setSectionDetails(data))
@@ -20,10 +21,10 @@ export function TrashDetailsPage() {
         const url = `http://localhost:4000/category/details/${sectionDetails?.id}`
         fetch(url).then(res => res.json()).then(data => setCategoryDetails(data))
     }, [sectionDetails])
+    // console.log('category:', categoryDetails);
 
 
-    console.log('category:', categoryDetails);
-
+    //returnere accordion med typer
     return (
         <section className={style.bg}>
             {sectionDetails &&

@@ -1,8 +1,8 @@
-//modtager 2 datoer i en string. Deler den i start og slut dato.
-//derefter "deles" datoerne op i start-dag og -måned, og slut-dag og -måned samt år.
+//modtager 1 dato i en string. 
+//derefter "deles" datoerne op i dag og måned og samt år.
 //månederne laves til en string på dansk med det fulde månedsnavn.
-//så sættes variablerne sammen til en dansk dato i convertedDate, som retuneres
-//koden er modifiseret fra https://github.com/Kanin60/Mediesuset/blob/main/src/helpers/convertDate.js
+// day, month og year retuneres
+//tilpasset fra https://github.com/Kanin60/Det-utrolige-teater/blob/main/src/helpers/dateConverter.jsx
 export function dateconverter(date) {
     let newDate = new Date(date);
 

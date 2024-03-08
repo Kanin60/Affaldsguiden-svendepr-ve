@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-// fetcher med GET. 
+// costume hook. fetcher med GET. fra https://github.com/Kanin60/Hotel_Overlook/blob/main/src/hooks/useFetch.jsx
 export const useFetch = (url) => {
     const [data, setData] = useState();
     const [error, setError] = useState();

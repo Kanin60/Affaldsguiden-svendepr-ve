@@ -5,16 +5,16 @@ import map from '../../assets/map.svg'
 import { Link } from 'react-router-dom'
 
 export function RecyclingCenterPage() {
-    const [averageStar, setAverageStar] = useState()
     const [recyclingCenterList, setRecyclingCenterList] = useState()
-    let recyclingCenterArray = useFetch('http://localhost:4000/orgs?attributes=id,name,address,zipcode,city')
 
+    //fetch data, gem state
+    let recyclingCenterArray = useFetch('http://localhost:4000/orgs?attributes=id,name,address,zipcode,city')
     useEffect(() => {
         setRecyclingCenterList(recyclingCenterArray.data)
     }, [recyclingCenterArray])
+    // console.log(recyclingCenterList);
 
-    console.log(recyclingCenterList);
-    console.log('Gennemsnit af stjerner: ', averageStar);
+    // retunere card med genbrugsstation. ingen stjerner...
     return (
         <section className={style.bg}>
             <div className={style.recyclingcenterpage}>

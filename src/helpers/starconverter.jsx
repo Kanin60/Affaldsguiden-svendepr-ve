@@ -1,4 +1,4 @@
-
+//convertere num_stars til stjerner
 
 export function starconverter(stars) {
     let star;

@@ -2,7 +2,7 @@ import style from './Search.module.scss'
 import { IoSearchOutline } from "react-icons/io5";
 
 export const Search = ({ setSearch }) => {
-
+    //updatere staten Search
     return (
         <search className={style.search}>
             <form>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export const ContainerType = ({ trin, title, text, containers, value, styling, styling2, setContainer_id, setChosenType }) => {
 
     console.log('Beholder: ', containers);
+    console.log(containers);
 
     return (
         <section className={style.containerformwrapper}>
@@ -22,10 +23,12 @@ export const ContainerType = ({ trin, title, text, containers, value, styling, s
                 <p>{text}</p>
                 <div className={style.containerformimg}>
                     {
-                        containers && containers?.data?.map((container) => {
+                        !!containers.length && containers?.map((container) => {
+                            // console.log("url: " + `http://localhost:4000/Assets/Images/Icons/${container?.icon_filename}`);
+
                             return (
                                 <figure key={container.id} className={style.figure}>
-                                    <img src={`http://localhost:4000/Assets/Images/icons/${container?.icon_filename}`} alt={container?.name} />
+                                    <img src={`http://localhost:4000/Assets/Images/Icons/${container?.icon_filename}`} alt={container?.name} />
                                     <input type="radio" name='type' required value={container.id} onClick={() => setContainer_id(container.id)} />
                                     <figcaption>{container?.name}</figcaption>
                                 </figure>

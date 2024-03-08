@@ -8,7 +8,7 @@ import { ReviewCard } from '../../components/ReviewCard/ReviewCard';
 import { starconverter } from '../../helpers/starconverter';
 import { UserContext } from "../../context/UserContext";
 
-export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, city, country }) {
+export function RecyclingDetailsPage() {
 
     const [recyclingCenterDetails, setRecyclingCenterDetails] = useState()
     const [review, setReview] = useState()
@@ -16,8 +16,9 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
     const [star, setStar] = useState(null)
     const [coloredStar, setColoredStar] = useState()
     const [message, setMessage] = useState("");
-    const { setUserData, userData } = useContext(UserContext);
+    const { setUserData, userData } = useContext(UserContext); //Usercontext til at checke login
 
+    //fetcher data og gemmer i state
     let recyclingCenterDetailsArray = useFetch(`http://localhost:4000/orgs/${id}`)
     let recyclingCenterDetailsList = recyclingCenterDetailsArray?.data
     let reviewArray = useFetch(`http://localhost:4000/reviews/${id}`)
@@ -27,11 +28,13 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
         setReview(reviewArray?.data)
     }, [recyclingCenterDetailsList, reviewArray, handleReview])
 
+    // fetcher med POST
     function handleReview(e) {
         e.preventDefault()
 
         let url = 'http://localhost:4000/reviews'
 
+        //appender på body
         let body = new URLSearchParams()
         body.append('org_id', id)
         body.append('subject', e.target.subject.value)
@@ -39,6 +42,7 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
         body.append('num_stars', star)
         body.append('date', new Date())
 
+        //bruger authorization fra context (user access_token)
         let options = {
             method: 'POST',
             body: body,
@@ -56,7 +60,7 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
             })
             .catch((err) => console.error(err))
     }
-
+    //helper funktion til at konvertere stjerner
     let convetedStar = starconverter(star)
     useEffect(() => {
         setColoredStar(convetedStar)
@@ -66,6 +70,7 @@ export function RecyclingDetailsPage({ imgSrc, title, stars, address, zipcode, c
     // console.log('antal star: ', star);
     // console.log('coloredStar: ', coloredStar);
 
+    //retunere figur, form og cards med anmeldelser
     return (
         <div className={style.bg}>
             <section className={style.recyclingdetailspage}>
