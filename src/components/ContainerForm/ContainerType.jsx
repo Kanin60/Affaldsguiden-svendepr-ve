@@ -7,6 +7,7 @@ export const ContainerType = ({ trin, title, text, containers, value, styling, s
     console.log('Beholder: ', containers);
     console.log(containers);
 
+    //retuner card med beholdertyper. updatere staten container_id
     return (
         <section className={style.containerformwrapper}>
             <div className={style.trin}>
@@ -23,9 +24,7 @@ export const ContainerType = ({ trin, title, text, containers, value, styling, s
                 <p>{text}</p>
                 <div className={style.containerformimg}>
                     {
-                        !!containers.length && containers?.map((container) => {
-                            // console.log("url: " + `http://localhost:4000/Assets/Images/Icons/${container?.icon_filename}`);
-
+                        containers.length && containers?.map((container) => {
                             return (
                                 <figure key={container.id} className={style.figure}>
                                     <img src={`http://localhost:4000/Assets/Images/Icons/${container?.icon_filename}`} alt={container?.name} />

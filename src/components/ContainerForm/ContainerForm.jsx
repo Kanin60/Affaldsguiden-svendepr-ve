@@ -31,6 +31,7 @@ export const ContainerForm = ({ trin, title, text, styling2, styling, container_
         let url = 'http://localhost:4000/orders'
 
         /* Body er inholdet af det vi sender til serveren/ request's body som sendes til serveren */
+        // container_id kommer fra i ContainerType
         let body = new URLSearchParams()
         body.append('fullname', e.target.name.value)
         body.append('address', e.target.address.value)
